@@ -1,20 +1,25 @@
 {
-  "name": "with-tailwind",
-  "private": true,
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "check-types": "turbo run check-types",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
-  },
-  "devDependencies": {
-    "prettier": "^3.6.0",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "turbo": "^2.5.8"
-  },
-  "packageManager": "pnpm@10.19.0",
-  "engines": {
-    "node": ">=18"
-  }
+	"name": "with-tailwind",
+	"private": true,
+	"scripts": {
+		"build": "dotenv -- turbo run build",
+		"dev": "dotenv -- turbo run dev",
+		"start": "dotenv -- turbo run start",
+		"generate": "dotenv -- turbo run generate",
+		"migrate": "dotenv -- turbo run migrate",
+		"lint": "dotenv -- turbo run lint",
+		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
+		"check-types": "dotenv -- turbo run check-types"
+	},
+	"devDependencies": {
+		"dotenv-cli": "^10.0.0",
+		"typescript": "5.8.2",
+		"prettier": "^3.6.0",
+		"prettier-plugin-tailwindcss": "^0.6.11",
+		"turbo": "^2.5.8"
+	},
+	"packageManager": "pnpm@10.19.0",
+	"engines": {
+		"node": ">=18"
+	}
 }

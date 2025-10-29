@@ -16,6 +16,18 @@
 		"dev": {
 			"cache": false,
 			"persistent": true
+		},
+		"generate": {
+			"cache": false,
+			"persistent": true
+		},
+		"migrate": {
+			"cache": false,
+			"persistent": true
+		},
+
+		"start": {
+			"cache": false
 		}
 	},
 	"globalEnv": [

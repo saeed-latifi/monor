@@ -2,6 +2,7 @@
 // import { jwtSignSession, jwtSignUser } from "@repo/jwt";
 // import { setCookie } from "hono/cookie";
 import { onResponseOk } from "@repo/types/helpers";
+import { loginValidator, validator } from "@repo/validator";
 import { Hono } from "hono";
 
 export const publicRoutes = new Hono();
@@ -13,5 +14,7 @@ publicRoutes.get("/test", async (ctx) => {
 	// setCookie(ctx, cookieKeySession, jwt, { maxAge: cookieAgeSession });
 	// setCookie(ctx, cookieKeyUser, tokenUser, { maxAge: cookieAgeUser });
 
-	return ctx.json(onResponseOk({ data: { test: "ok" }, message: ["it is OK"] }));
+	const validData = validator({ data: {}, schema: loginValidator.base });
+
+	return ctx.json(onResponseOk({ data: validData, message: ["it is OK"] }));
 });

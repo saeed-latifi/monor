@@ -1,2 +1,2 @@
-export * from "./schema.users.js";
-export * from "./schema.session.js";
+export * from "./schema.users.ts";
+export * from "./schema.session.ts";

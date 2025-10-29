@@ -1,7 +1,4 @@
 {
-	"extends": "@repo/config-typescript/tsconfig.api.json",
-	"include": ["src/**/*", "drizzle.config.ts"],
-	"exclude": ["node_modules", "dist", "**/*.test.ts"],
 	"$schema": "https://json.schemastore.org/tsconfig",
 	"compilerOptions": {
 		"declarationMap": true,

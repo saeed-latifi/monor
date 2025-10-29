@@ -1,7 +1,7 @@
 import { relations } from "drizzle-orm";
 import { boolean, integer, pgTable, varchar, uuid, timestamp, foreignKey, pgEnum } from "drizzle-orm/pg-core";
-import { sessionsTable } from "./schema.session.js";
-import { UserRole } from "../enums.js";
+import { sessionsTable } from "./schema.session.ts";
+import { UserRole } from "../enums.ts";
 
 export const userRoleEnum = pgEnum("user_role", [UserRole.Admin, UserRole.Base]);
 
@@ -16,6 +16,7 @@ export const usersTable = pgTable("users", {
 	createdAt: timestamp().notNull().defaultNow(),
 	isActive: boolean().notNull().default(true),
 	role: userRoleEnum().notNull().default(UserRole.Base),
+	extra: varchar(),
 });
 
 export const userExtraInfoTable = pgTable(

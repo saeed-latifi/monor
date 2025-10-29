@@ -1,6 +1,6 @@
 import { pgTable, timestamp, boolean, foreignKey, integer, varchar } from "drizzle-orm/pg-core";
 import { relations } from "drizzle-orm";
-import { usersTable } from "./schema.users.js";
+import { usersTable } from "./schema.users.ts";
 
 // Chat Room Table
 export const sessionsTable = pgTable(
