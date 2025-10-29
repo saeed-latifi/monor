@@ -1,5 +1,5 @@
 import { GetObjectCommand, PutObjectAclCommand, PutObjectCommand } from "@aws-sdk/client-s3";
-import { storage } from "./storage.client";
+import { storage } from "./storage.client.js";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 
 type downloadProps = {

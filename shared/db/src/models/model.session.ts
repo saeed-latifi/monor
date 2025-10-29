@@ -1,6 +1,6 @@
 import { eq, and, type InferSelectModel, type InferInsertModel } from "drizzle-orm";
-import { sessionsTable } from "../schema/schema.session";
-import { db } from "../client";
+import { sessionsTable } from "../schema/schema.session.js";
+import { db } from "../client.js";
 
 export type ISession = InferSelectModel<typeof sessionsTable>;
 export type ISessionCreate = Omit<InferInsertModel<typeof sessionsTable>, "">;

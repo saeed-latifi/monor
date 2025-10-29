@@ -2,7 +2,7 @@ import { Compile } from "typebox/compile";
 import Format from "typebox/format";
 import type { Static, TObject } from "typebox";
 import { phoneNumberLength } from "@repo/config-static";
-import { digitFixer } from "@repo/shared-utils";
+import { digitFixer } from "@repo/utils/textFixer";
 
 export const formats = {
 	number: /^[0-9]+$/,

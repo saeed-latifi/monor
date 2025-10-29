@@ -1,5 +1,5 @@
 import { PutObjectCommand } from "@aws-sdk/client-s3";
-import { storage } from "./storage.client";
+import { storage } from "./storage.client.js";
 
 export interface StorageObjectCreateParams {
 	bucket: string;
@@ -20,6 +20,6 @@ export async function storageContentCreate({ bucket, path, fileName, data, conte
 			Body: data,
 			ContentType: contentType,
 			Metadata: metadata,
-		})
+		}),
 	);
 }

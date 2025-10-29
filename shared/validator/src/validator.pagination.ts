@@ -1,5 +1,5 @@
 import Type from "typebox";
-import { validator } from "./validator";
+import { validator } from "./validator.js";
 
 export const SortBy = { student: "student", support: "support" } as const;
 export type SortBy = (typeof SortBy)[keyof typeof SortBy];

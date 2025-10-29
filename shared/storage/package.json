@@ -1,8 +1,5 @@
 {
 	"name": "@repo/storage",
-	"exports": {
-		".": "./src/index.ts"
-	},
 	"type": "module",
 	"scripts": {
 		"build": "tsc"
@@ -15,5 +12,18 @@
 	"devDependencies": {
 		"@types/node": "^24.8.1",
 		"@repo/config-typescript": "workspace:*"
+	},
+	"files": [
+		"./dist/**"
+	],
+	"exports": {
+		".": {
+			"import": "./dist/entry.js",
+			"require": "./dist/entry.js"
+		},
+		"./*": {
+			"import": "./dist/*.js",
+			"require": "./dist/*.js"
+		}
 	}
 }

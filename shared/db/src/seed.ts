@@ -1,5 +1,5 @@
-import { UserRole } from "./enums";
-import { modelUserCreate, modelUserGetList } from "./models";
+import { UserRole } from "./enums.js";
+import { modelUserCreate, modelUserGetList } from "./models/index.js";
 
 export async function seedRootUser({ password }: { password: string }) {
 	const { users } = await modelUserGetList({ skip: 0, take: 100 });

@@ -1,3 +1,3 @@
-export { db } from "./client";
-export * from "./models";
-export * from "./seed";
+export { db } from "./client.js";
+export * from "./models/index.js";
+export * from "./seed.js";

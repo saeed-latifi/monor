@@ -1,2 +1,2 @@
 export * as responseType from "./response";
-export * from "@repo/shared-db/types";
+export * from "@repo/db/types";

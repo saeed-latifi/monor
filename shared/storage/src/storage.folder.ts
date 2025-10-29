@@ -1,5 +1,5 @@
 import { DeleteObjectCommand, ListObjectsV2Command, PutObjectCommand } from "@aws-sdk/client-s3";
-import { storage } from "./storage.client";
+import { storage } from "./storage.client.js";
 
 interface args {
 	bucketName: string;

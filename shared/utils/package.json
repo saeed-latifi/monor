@@ -1,14 +1,28 @@
 {
 	"name": "@repo/utils",
-	"exports": {
-		".": "./src/index.ts"
-	},
 	"type": "module",
 	"scripts": {
-		"build": "tsc"
+		"dev": "pnpm build --watch",
+		"build": "tsc -b -v"
 	},
 	"devDependencies": {
 		"@types/node": "^24.8.1",
 		"@repo/config-typescript": "workspace:*"
+	},
+	"files": [
+		"./dist/**"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"exports": {
+		".": {
+			"import": "./dist/entry.js",
+			"require": "./dist/entry.js"
+		},
+		"./*": {
+			"import": "./dist/*.js",
+			"require": "./dist/*.js"
+		}
 	}
 }

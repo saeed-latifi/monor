@@ -8,7 +8,7 @@ import {
 	GetBucketPolicyStatusCommand,
 	PutBucketPolicyCommand,
 } from "@aws-sdk/client-s3";
-import { storage } from "./storage.client";
+import { storage } from "./storage.client.js";
 
 export async function storageBucketCreate(name: string, isPublic?: boolean) {
 	try {

@@ -1,6 +1,6 @@
 import { eq, type InferInsertModel, type InferSelectModel } from "drizzle-orm";
-import { userExtraInfoTable, userSensitiveInfoTable, usersTable } from "../schema";
-import { db } from "../client";
+import { userExtraInfoTable, userSensitiveInfoTable, usersTable } from "../schema/index.js";
+import { db } from "../client.js";
 
 export type IUser = InferSelectModel<typeof usersTable>;
 export type IUserCreate = Omit<InferInsertModel<typeof usersTable> & { password: string }, "createdAt" | "isActive" | "info" | "avatar">;
