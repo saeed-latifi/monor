@@ -1,0 +1,19 @@
+{
+	"name": "@repo/storage",
+	"exports": {
+		".": "./src/index.ts"
+	},
+	"type": "module",
+	"scripts": {
+		"build": "tsc"
+	},
+	"dependencies": {
+		"@aws-sdk/client-s3": "^3.911.0",
+		"@aws-sdk/s3-request-presigner": "^3.911.0",
+		"@repo/config-static": "workspace:*"
+	},
+	"devDependencies": {
+		"@types/node": "^24.8.1",
+		"@repo/config-typescript": "workspace:*"
+	}
+}

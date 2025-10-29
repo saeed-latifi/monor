@@ -1,0 +1,163 @@
+/* Component-level styles for the UI package */
+/* @import "tailwindcss" prefix(ui); */
+
+@import "tailwindcss";
+
+@theme {
+	/* color */
+	--color-teen: #bb0527;
+	--color-base: #212c58;
+	--color-action: #403a99;
+	--color-badge: #10de39;
+	--color-border: #d5d5d5;
+	--color-error: #c2002d;
+	--color-background: #f6f6f6;
+	--color-white: #fff;
+	--color-text: #5b5b5b;
+
+	/* shadow */
+	--shadow-center: 1px 2px 5px 0px rgba(0, 0, 0, 0.5);
+
+	--font-peyda: "peyda";
+	--font-peyda-bold: "peyda-bold";
+}
+
+@utility shimmer {
+	background: #ddd;
+	background-image: linear-gradient(120deg, #ddd 35%, #fff 50%, #ddd 65%);
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: rgba(153, 136, 119, 0);
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-name: placeholderShimmer;
+	animation-timing-function: linear;
+}
+
+@keyframes placeholderShimmer {
+	0% {
+		background-position: -30rem;
+	}
+
+	100% {
+		background-position: 30rem;
+	}
+}
+
+.shadow-footer {
+	box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+* {
+	direction: inherit;
+	/* height: max-content; */
+	cursor: inherit;
+	object-fit: contain;
+}
+
+*:disabled {
+	opacity: 0.7;
+	cursor: not-allowed;
+}
+
+body {
+	direction: rtl;
+	fill: var(--color-text);
+	color: var(--color-text);
+
+	/*  */
+	width: 100%;
+	height: max-content;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+	align-items: center;
+	font-family: peyda;
+}
+
+.bg-tile {
+	background-image: url("https://dastan.storage.iran.liara.space/red/public/bg-tile.webp");
+	background-repeat: repeat;
+	/* background-color: rgba(0, 255, 42, 0.1); Yellow with 30% opacity */
+	/* background-blend-mode: overlay; */
+}
+
+label,
+a,
+.clicker {
+	@apply hover:opacity-90 active:opacity-70 cursor-pointer select-none;
+}
+
+video:fullscreen {
+	border: none !important;
+	border-radius: 0 !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	background-color: transparent !important;
+	-webkit-box-shadow: 0 0 0 30px white inset !important; /* Optional: Set inner shadow to match background */
+}
+
+textarea,
+input {
+	border: none;
+	outline: none !important; /* Removes the default outline */
+}
+
+.bg-opacity-0 {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.bg-opacity-70 {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+@font-face {
+	font-family: "peyda";
+	src: url("/fonts/Peyda-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "peyda";
+	src: url("/fonts/Peyda-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "peyda-bold";
+	src: url("/fonts/Peyda-Bold.woff") format("woff");
+	font-style: normal;
+}
+
+/*  remove scrollbar */
+*::-webkit-scrollbar {
+	display: none;
+}
+
+* {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+.bg-gradient-red {
+	background: #e10330;
+	background: linear-gradient(0deg, rgba(217, 3, 46, 1) 0%, rgba(164, 10, 36, 1) 85%, rgba(225, 3, 48, 1) 100%);
+}
+
+.bg-gradient-yellow {
+	background: #fbffdc;
+	background: radial-gradient(circle, rgba(251, 255, 220, 1) 0%, rgba(255, 226, 82, 1) 100%);
+}
+
+.bg-gradient-green {
+	background: #00610b;
+	background: linear-gradient(0deg, rgba(0, 97, 11, 1) 0%, rgba(20, 171, 35, 1) 100%);
+}

@@ -1,0 +1,16 @@
+{
+	"name": "@repo/types",
+	"exports": {
+		".": "./src/index.ts",
+		"./enums": "./src/enums.ts",
+		"./response": "./src/response.ts",
+		"./helpers": "./src/helpers.ts",
+		"./types": "./src/types.ts"
+	},
+	"type": "module",
+	"devDependencies": {
+		"@repo/config-typescript": "workspace:*",
+		"@repo/db": "workspace:*",
+		"@types/node": "^24.8.1"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"name": "@repo/logger",
+	"exports": {
+		".": "./src/index.ts"
+	},
+	"type": "module",
+	"scripts": {
+		"build": "tsc"
+	},
+	"devDependencies": {
+		"@types/node": "^24.8.1",
+		"@repo/config-typescript": "workspace:*"
+	}
+}

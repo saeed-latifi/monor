@@ -1,0 +1,19 @@
+{
+	"name": "@repo/mail",
+	"exports": {
+		".": "./src/index.ts"
+	},
+	"type": "module",
+	"scripts": {
+		"build": "tsc"
+	},
+	"devDependencies": {
+		"@types/nodemailer": "^7.0.2",
+		"@repo/config-typescript": "workspace:*"
+	},
+	"dependencies": {
+		"@types/node": "^24.8.1",
+		"@repo/config-static": "workspace:*",
+		"nodemailer": "^7.0.9"
+	}
+}
