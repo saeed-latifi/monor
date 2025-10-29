@@ -1,6 +1,6 @@
 packages:
-  - "apps/*"
-  - "packages/*"
-  - "shared/*"
-  - "config/*"
-  
+    - "apps/*"
+    - "packages/*"
+    - "shared/*"
+    - "config/*"
+    - "api/*"

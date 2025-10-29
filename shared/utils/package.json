@@ -2,7 +2,7 @@
 	"name": "@repo/utils",
 	"type": "module",
 	"scripts": {
-		"dev": "pnpm build --watch",
+		"devX": "pnpm build --watch",
 		"build": "tsc -b -v"
 	},
 	"devDependencies": {

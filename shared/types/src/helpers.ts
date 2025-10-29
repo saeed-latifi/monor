@@ -1,4 +1,4 @@
-import { ResponseStates, type IResponse, type IValidations } from "./response";
+import { ResponseStates, type IResponse, type IValidations } from "./response.js";
 
 export function onResponseOk<T, X>({ data, metadata, message, length }: { data: T; message?: string[]; metadata?: X; length?: number }) {
 	const response: IResponse<T, X> = {

@@ -1,21 +1,39 @@
 {
-  "$schema": "https://turborepo.com/schema.json",
-  "ui": "tui",
-  "tasks": {
-    "build": {
-      "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
-    },
-    "lint": {
-      "dependsOn": ["^lint"]
-    },
-    "check-types": {
-      "dependsOn": ["^check-types"]
-    },
-    "dev": {
-      "cache": false,
-      "persistent": true
-    }
-  }
+	"$schema": "https://turborepo.com/schema.json",
+	"ui": "tui",
+	"tasks": {
+		"build": {
+			"dependsOn": ["^build"],
+			"inputs": ["$TURBO_DEFAULT$", ".env*"],
+			"outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+		},
+		"lint": {
+			"dependsOn": ["^lint"]
+		},
+		"check-types": {
+			"dependsOn": ["^check-types"]
+		},
+		"dev": {
+			"cache": false,
+			"persistent": true
+		}
+	},
+	"globalEnv": [
+		"DATABASE_URL",
+		"STORAGE_END_POINT",
+		"STORAGE_PORT",
+		"STORAGE_ACCESS_KEY",
+		"STORAGE_SECRET_KEY",
+		"TOKEN_USER",
+		"TOKEN_SESSION",
+		"COOKIE_KEY_USER",
+		"COOKIE_KEY_SESSION",
+		"EMAIL_FROM",
+		"EMAIL_PORT",
+		"EMAIL_USER",
+		"EMAIL_PASSWORD",
+		"EMAIL_HOST",
+		"EMAIL_NAME",
+		"APP_STATE"
+	]
 }

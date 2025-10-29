@@ -5,7 +5,8 @@
 	},
 	"type": "module",
 	"scripts": {
-		"build": "tsc"
+		"devX": "pnpm build --watch",
+		"build": "tsc -b -v"
 	},
 	"devDependencies": {
 		"@types/node": "^24.8.1",

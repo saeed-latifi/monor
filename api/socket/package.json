@@ -1,0 +1,29 @@
+{
+	"name": "@repo/api-socket",
+	"type": "module",
+	"scripts": {
+		"dev": "tsx watch src/index.ts",
+		"build": "tsc",
+		"start": "tsx src/index.ts"
+	},
+	"dependencies": {
+		"@socket.io/admin-ui": "^0.5.1",
+		"cookie": "^1.0.2",
+		"socket.io": "^4.8.1",
+		"@repo/config-static": "workspace:*",
+		"@repo/db": "workspace:*",
+		"@repo/jwt": "workspace:*",
+		"@repo/logger": "workspace:*",
+		"@repo/storage": "workspace:*",
+		"@repo/utils": "workspace:*",
+		"@repo/validator": "workspace:*",
+		"@repo/types": "workspace:*",
+		"bcryptjs": "^3.0.2"
+	},
+	"devDependencies": {
+		"@repo/config-typescript": "workspace:*",
+		"@types/node": "^24.8.1",
+		"tsx": "^4.7.1",
+		"typescript": "^5.8.3"
+	}
+}
