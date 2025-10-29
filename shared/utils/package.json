@@ -9,20 +9,14 @@
 		"@types/node": "^24.8.1",
 		"@repo/config-typescript": "workspace:*"
 	},
-	"files": [
-		"./dist/**"
-	],
-	"publishConfig": {
-		"access": "public"
-	},
 	"exports": {
 		".": {
-			"import": "./dist/entry.js",
-			"require": "./dist/entry.js"
+			"import": "./src/index.ts",
+			"require": "./src/index.ts"
 		},
 		"./*": {
-			"import": "./dist/*.js",
-			"require": "./dist/*.js"
+			"import": "./src/*.ts",
+			"require": "./src/*.ts"
 		}
 	}
 }

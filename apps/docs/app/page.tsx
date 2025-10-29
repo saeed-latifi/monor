@@ -3,6 +3,8 @@ import { Card } from "@repo/ui/card";
 import { Gradient } from "@repo/ui/gradient";
 import { TurborepoLogo } from "@repo/ui/turborepo-logo";
 import { Test } from "./components/test";
+import { digitFixer } from "@repo/utils/textFixer";
+import { ButtonRound } from "@repo/ui/buttons/ButtonRound";
 
 const LINKS = [
 	{
@@ -31,6 +33,9 @@ export default function Page() {
 	return (
 		<main className="flex flex-col items-center justify-between min-h-screen p-24">
 			<Test />
+			<p>{digitFixer("65a ش ۲۳۲۴")}</p>
+			<ButtonRound>صثقصثق</ButtonRound>
+
 			<div className="z-10 items-center justify-between w-full max-w-5xl font-mono text-sm lg:flex">
 				<p className="fixed top-0 left-0 flex justify-center w-full px-4 pt-8 pb-6 border backdrop-blur-2xl border-neutral-800 from-inherit lg:static lg:w-auto lg:rounded-xl lg:p-4">
 					examples/with-tailwind -&nbsp;

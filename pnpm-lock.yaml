@@ -155,6 +155,12 @@ importers:
       '@repo/config-typescript':
         specifier: workspace:*
         version: link:../../config/typescript-config
+      '@repo/types':
+        specifier: workspace:*
+        version: link:../../shared/types
+      '@repo/utils':
+        specifier: workspace:*
+        version: link:../../shared/utils
       '@tailwindcss/postcss':
         specifier: ^4.1.5
         version: 4.1.16

@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useRef, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 
 export type popupItemType = { id: number | string; onClick: () => void; title: ReactNode };
 type propsType = { content: (popupItemType | undefined)[]; label: ReactNode; selected?: number | string; position: positionType; itemPadding: string; className?: string };

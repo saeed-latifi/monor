@@ -3,12 +3,9 @@
 	"compilerOptions": {
 		"declarationMap": true,
 		"incremental": true,
-		"lib": ["es2022", "DOM", "DOM.Iterable"],
-		"module": "NodeNext",
-		"moduleResolution": "NodeNext",
+		"lib": ["ESNext"],
 		"resolveJsonModule": true,
 		"strict": true,
-		"target": "ES2022",
 
 		"esModuleInterop": true,
 		"skipLibCheck": true,
@@ -28,6 +25,10 @@
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
 		"noUncheckedSideEffectImports": true,
-		"verbatimModuleSyntax": true
+		"verbatimModuleSyntax": true,
+		// =================
+		"target": "esnext",
+		"module": "nodenext",
+		"moduleResolution": "nodenext"
 	}
 }

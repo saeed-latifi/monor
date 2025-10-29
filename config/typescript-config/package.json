@@ -1,9 +1,15 @@
 {
-  "name": "@repo/config-typescript",
-  "version": "0.0.0",
-  "private": true,
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "@repo/config-typescript",
+	"version": "0.0.0",
+	"private": true,
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	},
+	"exports": {
+		"./api": "./tsconfig.api.json",
+		"./dom": "./tsconfig.dom.json",
+		"./next": "./tsconfig.next.json",
+		"./react": "./tsconfig.react.json"
+	}
 }

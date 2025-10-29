@@ -17,6 +17,7 @@ export const usersTable = pgTable("users", {
 	isActive: boolean().notNull().default(true),
 	role: userRoleEnum().notNull().default(UserRole.Base),
 	extra: varchar(),
+	test: varchar(),
 });
 
 export const userExtraInfoTable = pgTable(

@@ -19,12 +19,12 @@
 	],
 	"exports": {
 		".": {
-			"import": "./dist/entry.js",
-			"require": "./dist/entry.js"
+			"import": "./src/index.ts",
+			"require": "./src/index.ts"
 		},
 		"./*": {
-			"import": "./dist/*.js",
-			"require": "./dist/*.js"
+			"import": "./src/*.ts",
+			"require": "./src/*.ts"
 		}
 	}
 }
